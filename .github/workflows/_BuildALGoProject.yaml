@@ -73,6 +73,7 @@ on:
         description: Flag determining whether to use the Artifacts Cache
         type: boolean
         default: false
+      # -->Apo GHCP  
       containerImage:
         description: Optional container image to use instead of downloading artifacts
         required: false
@@ -88,6 +89,7 @@ on:
         required: false
         type: string
         default: ''
+      # --Apo GHCP  
 permissions:
   actions: read
   contents: read
