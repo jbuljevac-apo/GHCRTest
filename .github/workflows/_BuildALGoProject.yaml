@@ -79,16 +79,11 @@ on:
         required: false
         type: string
         default: ''
-      artifactUrl:
+      artifact:
         description: Optional override for artifact URL (empty to skip)
         required: false
         type: string
-        default: ''
-      artifactVersion:
-        description: Optional override for artifact version (empty to skip)
-        required: false
-        type: string
-        default: ''
+        default: ''   
       # --Apo GHCP  
 permissions:
   actions: read
@@ -184,7 +179,7 @@ jobs:
           buildMode: ${{ inputs.buildMode }}
           # -->Apo GHCP          
           containerImage: ${{ inputs.containerImage }}
-          artifact: ${{ inputs.artifactUrl }}
+          artifact: ${{ inputs.artifact}}
           # -- Apo GHCP
           installAppsJson: ${{ steps.DownloadProjectDependencies.outputs.DownloadedApps }}
           installTestAppsJson: ${{ steps.DownloadProjectDependencies.outputs.DownloadedTestApps }}
