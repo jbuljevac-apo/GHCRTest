@@ -79,6 +79,11 @@ on:
         required: false
         type: string
         default: ''
+      artifact:
+        description: 'Optional artifact path (leave empty to skip downloading artifacts)'
+        required: false
+        type: string
+        default: ''
       # --Apo GHCP  
 permissions:
   actions: read
