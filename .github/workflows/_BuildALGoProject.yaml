@@ -125,10 +125,9 @@ jobs:
           token: '${{ fromJson(steps.ReadSecrets.outputs.Secrets).gitSubmodulesToken }}'
       - name: Determine ArtifactUrl
         id: determineArtifactUrl    
-        if: steps.DetermineBuildProject.outputs.BuildIt == 'True' 
-        #-->Apo
-        && inputs.containerImage == ''
-        #--Apo
+        #-->Apo GHCR
+        if: steps.DetermineBuildProject.outputs.BuildIt == 'True' && inputs.containerImage == ''      
+        #--Apo GHCR
         uses: microsoft/AL-Go-Actions/DetermineArtifactUrl@v7.0
         with:
           shell: ${{ inputs.shell }}
