@@ -195,8 +195,7 @@ jobs:
       baselineWorkflowSHA: ${{ needs.Initialization.outputs.baselineWorkflowSHA }}
       # -->Apo GHCP  
       containerImage: 'ghcr.io/jbuljevac-apo/bc365nl:ltsc2019'
-      artifactUrl: ''
-      artifactVersion: ''
+      artifact: ''
       # --Apo GHCP  
       secrets: 'licenseFileUrl,codeSignCertificateUrl,*codeSignCertificatePassword,keyVaultCertificateUrl,*keyVaultCertificatePassword,keyVaultClientId,gitHubPackagesContext,applicationInsightsConnectionString'
       signArtifacts: true
