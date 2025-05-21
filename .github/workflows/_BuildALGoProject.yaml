@@ -177,7 +177,9 @@ jobs:
           BuildMode: ${{ inputs.buildMode }}
         with:
           shell: ${{ inputs.shell }}
-          artifact: ${{ env.artifact }}
+          # -->Apo GHCP  
+          # artifact: ${{ env.artifact }}
+          # -- Apo GHCP
           project: ${{ inputs.project }}
           buildMode: ${{ inputs.buildMode }}
           # -->Apo GHCP          
