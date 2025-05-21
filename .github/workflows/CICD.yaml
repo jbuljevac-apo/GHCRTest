@@ -191,8 +191,7 @@ jobs:
       baselineWorkflowRunId: ${{ needs.Initialization.outputs.baselineWorkflowRunId }}
       baselineWorkflowSHA: ${{ needs.Initialization.outputs.baselineWorkflowSHA }}
       # -->Apo GHCP
-      containerOverrideScript: '.github/containerOverride.ps1'
-      artifact: ''
+      containerOverrideScript: '.github/containerOverride.ps1'  
       # -- Apo GHCP
       secrets: 'licenseFileUrl,codeSignCertificateUrl,*codeSignCertificatePassword,keyVaultCertificateUrl,*keyVaultCertificatePassword,keyVaultClientId,gitHubPackagesContext,applicationInsightsConnectionString'
       signArtifacts: true
