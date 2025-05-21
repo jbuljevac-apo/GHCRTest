@@ -171,6 +171,7 @@ jobs:
           Secrets: '${{ steps.ReadSecrets.outputs.Secrets }}'
           BuildMode: ${{ inputs.buildMode }}
           # -->Apo GHCP  
+          containerImage: ${{ inputs.containerImage }}
           gitHubHostedRunner: 'true'  # <-- Add this line
           # -- Apo GHCP
         with:
@@ -180,8 +181,7 @@ jobs:
           # -- Apo GHCP
           project: ${{ inputs.project }}
           buildMode: ${{ inputs.buildMode }}
-          # -->Apo GHCP          
-          containerImage: ${{ inputs.containerImage }}
+          # -->Apo GHCP                   
           artifact: ${{ inputs.artifact}}
           # -- Apo GHCP
           installAppsJson: ${{ steps.DownloadProjectDependencies.outputs.DownloadedApps }}
