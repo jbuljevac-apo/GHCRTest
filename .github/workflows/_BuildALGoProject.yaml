@@ -73,7 +73,18 @@ on:
         description: Flag determining whether to use the Artifacts Cache
         type: boolean
         default: false
-
+      # -->Apo GHCP    
+      containerOverrideScript:
+        description: 'Optional script to override container behavior'
+        required: false
+        type: string
+        default: ''
+      artifact:
+        description: 'Optional artifact path (leave empty to skip downloading artifacts)'
+        required: false
+        type: string
+        default: ''
+      # --Apo GHCP  
 permissions:
   actions: read
   contents: read
