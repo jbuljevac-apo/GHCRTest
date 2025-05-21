@@ -1,5 +1,7 @@
 name: '_Build AL-Go project'
+
 run-name: 'Build ${{ inputs.project }}'
+
 on:
   workflow_call:
     inputs:
@@ -40,7 +42,7 @@ on:
         required: true
         type: string
       baselineWorkflowRunId:
-        description: ID of the baseline workflow run, from where to download the current project dependencies, in case they are not built in the current workflow run
+        description: ID of the baseline workflow run
         required: false
         default: '0'
         type: string
@@ -71,24 +73,21 @@ on:
         description: Flag determining whether to use the Artifacts Cache
         type: boolean
         default: false
-         containerImage:
-        description: 'Optional container image to use instead of downloading artifacts'
+      containerImage:
+        description: Optional container image to use instead of downloading artifacts
         required: false
         type: string
         default: ''
-        
       artifactUrl:
-        description: 'Force skipping artifact download by passing an empty string'
+        description: Optional override for artifact URL (empty to skip)
         required: false
         type: string
         default: ''
-      # -->Apo GHCP   
       artifactVersion:
-        description: 'Force skipping artifact download by passing an empty string'
+        description: Optional override for artifact version (empty to skip)
         required: false
         type: string
         default: ''
-      # -- Apo GHCP
 permissions:
   actions: read
   contents: read
