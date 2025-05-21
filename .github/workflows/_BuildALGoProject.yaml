@@ -170,6 +170,9 @@ jobs:
         env:
           Secrets: '${{ steps.ReadSecrets.outputs.Secrets }}'
           BuildMode: ${{ inputs.buildMode }}
+          # -->Apo GHCP  
+          gitHubHostedRunner: 'true'  # <-- Add this line
+          # -- Apo GHCP
         with:
           shell: ${{ inputs.shell }}
           # -->Apo GHCP  
