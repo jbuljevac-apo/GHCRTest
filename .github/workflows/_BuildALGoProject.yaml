@@ -71,6 +71,24 @@ on:
         description: Flag determining whether to use the Artifacts Cache
         type: boolean
         default: false
+         containerImage:
+        description: 'Optional container image to use instead of downloading artifacts'
+        required: false
+        type: string
+        default: ''
+        
+      artifactUrl:
+        description: 'Force skipping artifact download by passing an empty string'
+        required: false
+        type: string
+        default: ''
+      # -->Apo GHCP   
+      artifactVersion:
+        description: 'Force skipping artifact download by passing an empty string'
+        required: false
+        type: string
+        default: ''
+      # -- Apo GHCP
 permissions:
   actions: read
   contents: read
@@ -163,6 +181,7 @@ jobs:
           buildMode: ${{ inputs.buildMode }}
           # -->Apo GHCP          
           containerImage: ${{ inputs.containerImage }}
+          artifact: ${{ inputs.artifactUrl }}
           # -- Apo GHCP
           installAppsJson: ${{ steps.DownloadProjectDependencies.outputs.DownloadedApps }}
           installTestAppsJson: ${{ steps.DownloadProjectDependencies.outputs.DownloadedTestApps }}
