@@ -86,7 +86,8 @@ env:
 jobs:
   BuildALGoProject:
     needs: [ ]
-    runs-on: ${{ fromJson(inputs.runsOn) }}
+    # runs-on: ${{ fromJson(inputs.runsOn) }}
+    runs-on: self-hosted
     defaults:
       run:
         shell: ${{ inputs.shell }}
