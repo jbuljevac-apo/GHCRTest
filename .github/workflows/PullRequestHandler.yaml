@@ -26,8 +26,7 @@ env:
 jobs:
   PregateCheck:
     if: (github.event.pull_request.base.repo.full_name != github.event.pull_request.head.repo.full_name) && (github.event_name != 'pull_request')
-    # apo runs-on: windows-latest
-    runs-on: self-hosted
+    runs-on: windows-latest    
     steps:
       - uses: microsoft/AL-Go-Actions/VerifyPRChanges@v7.0
 
