@@ -1,7 +1,10 @@
 {
   "type": "PTE",
   "templateUrl": "https://github.com/microsoft/AL-Go-PTE@main",
-  "artifact": "https://bcartifacts-exdbf9fwegejdqak.b02.azurefd.net/onprem/25.7.33396.0/nl",
+  //"artifact": "https://bcartifacts-exdbf9fwegejdqak.b02.azurefd.net/onprem/25.7.33396.0/nl",
+  "version": "25.7.33396.0",
+  "country": "nl",
+  "containerImage": "ghcr.io/jbuljevac-apo/bc365nl:ltsc2019"
   "gitHubRunner": "self-hosted, Windows",
   "buildMode": "Default",
   "settings": {},
