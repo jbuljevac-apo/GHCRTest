@@ -4,7 +4,7 @@
   
   "version": "25.7.33396.0",
   "country": "nl",
-  "containerImage": "ghcr.io/jbuljevac-apo/bc365nl:ltsc2019"
+  "containerImage": "ghcr.io/jbuljevac-apo/bc365nl:ltsc2019",
   "gitHubRunner": "self-hosted, Windows",
   "buildMode": "Default",
   "settings": {},
