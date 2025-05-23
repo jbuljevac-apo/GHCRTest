@@ -1,14 +1,9 @@
 {
   "type": "PTE",
   "templateUrl": "https://github.com/microsoft/AL-Go-PTE@main",
-  
   "artifact": "https://bcartifacts-exdbf9fwegejdqak.b02.azurefd.net/onprem/25.7.33396.0/nl",
-
-
-  "gitHubRunner": "self-hosted, Windows" ,
+  "gitHubRunner": "self-hosted, Windows",
   "buildMode": "Default",
-  "settings": {   
-  }
-
-  
+  "settings": {},
+  "templateSha": "14c066bb7929339c3ebb205f179d9435ec47c725"
 }
